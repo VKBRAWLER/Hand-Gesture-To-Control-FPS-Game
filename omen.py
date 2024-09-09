@@ -69,11 +69,12 @@ while True:
   results = hands.process(frame_rgb)
   sign = pridict(results)
   if key == 'E':
-    if sign == 'Q':
+    if sign == 'R':
       print('Dark Cover Placed')
       keyboard.press_and_release('e')
       executing = False
       key = None
+      time.sleep(2)
     else:
       new_length = get_distance(frame, results)
       print(new_length)
@@ -89,7 +90,7 @@ while True:
         keyboard.release('s')
       else :
         print('Same')
-      time.sleep(0.4)
+      time.sleep(0.6)
   if sign == prevSign or sign is None:
     continue
   elif executing:
@@ -159,7 +160,7 @@ while True:
     keyboard.press_and_release('e')
     executing = True
   elif sign == 'P':
-    print('defusing')
+    print('planting')
     keyboard.press('4')
     executing = True
     key = 'P'
