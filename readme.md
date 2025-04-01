@@ -89,3 +89,6 @@ keyboard, flatbuffers, threadpoolctl, six, pyparsing, pycparser, protobuf, pillo
 ## Contributing
 
 Contributions to this project are welcome. If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the project repository.
+1. **`Using NORM_RECT without IMAGE_DIMENSIONS` Warning**: This warning indicates that the `NORM_RECT` is being used without specifying image dimensions, which is only supported for square regions of interest (ROI). To resolve this:
+    - Ensure that the input image or ROI is square.
+    - Alternatively, provide the `IMAGE_DIMENSIONS` explicitly if supported by the Mediapipe graph you are using.
